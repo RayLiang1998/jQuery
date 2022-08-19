@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01documentReady.html</title>
+    <script>
+        //ready是一個事件，等到DOMTree產生後會執行這個事件
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script>
+        //jQuery('h1').css('color', 'green')
+        //$('h1').css('color', 'blue');
+
+
+        //jQuery(document).ready(function () {
+        //    //jQuery('h1').css('color', 'green')
+        //    $('h1').css('color', 'orange');
+        //})
+
+        $(function () {
+            //jQuery('h1').css('color', 'green')
+            $('h1').css('color', 'pink');
+
+            //chain
+            console.log($('h1').css('color', 'green').css('color'));
+            //$('h1').css('color', 'green') ---> jQuery object
+            //$('h1').css('color', 'green').css('color') --->string
+
+            //console.log($('h1').css('color').css('color', 'green')); --->incorrect
+
+        })
+    </script>
+</head>
+<body>
+    <h1>write less,do more</h1>
+    <!--<script src="../js/jquery-3.6.0.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        //jQuery('h1')
+        $('h1').css('color', 'blue');
+    </script>-->
+</body>
+</html>
