@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <title>Star</title>
+    <style>
+        .isClick {
+            /*background-image: url('hwimage/chngstar.gif');*/
+            filter:grayscale(0);
+        }
+
+        .star {
+            /*background-image: url("hwimage/star.gif");*/
+            background-image: url('hwimage/chngstar.gif');
+            filter: grayscale(1);
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!--<img id="img1" class="i" src="hwimage/star.gif" />
+    <img id="img1" class="i" src="hwimage/star.gif" />
+    <img id="img1" class="i" src="hwimage/star.gif" />
+    <img id="img1" class="i" src="hwimage/star.gif" />
+    <img id="img1" class="i" src="hwimage/star.gif" />
+
+    <script src="../jQueryLabsrcMSIT(20220727)/js/jquery-3.6.0.min.js"></script>
+    <script>
+                $("img").hover(function () {
+                    $(this).prop("src", "hwimage/chngstar.gif");
+                    $(this).prevAll().prop("src", "hwimage/chngstar.gif");
+                }, function () {
+                        $(this).prop("src", "hwimage/star.gif");
+                })
+
+                $("img").click(function () {
+                    $(this).prop("src", "hwimage/chngstar.gif");
+                    $(this).prevAll().prop("src", "hwimage/chngstar.gif");
+                }, function () {
+                    $(this).prop("src", "hwimage/star.gif");
+                })-->
+                <!--//========================================-->
+            <div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="info"></div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            let hasScore = false;
+            $(".star").mouseenter(function () {
+                if (hasScore === true) { return }
+                $(this).addClass("isClick").prevAll().addClass("isClick").end().addClass("isClick");
+                let score = ($(this).index()) + 1
+                $(this).siblings(".info").text(`打分數中：${score} 分`);
+            });
+
+            $(".star").mouseleave(function () {
+                if (hasScore === true) { return }
+                $(".star").removeClass("isClick")
+                $(".info").text(`尚未評分`);
+            });
+
+            $(".star").click(function () {
+                $(this).addClass("isClick").prevAll().addClass("isClick").end().addClass("isClick");
+                hasScore = true;
+                let score = ($(this).index()) + 1
+                $(this).siblings(".info").text(`目前分數是：${score} 分`);
+            })
+            $(".star").dblclick(function () {
+                $(".star").removeClass("isClick")
+                $(".info").text(`尚未評分`);
+                hasScore = false;
+            })
+        });
+    </script>
+</body>
+</html>

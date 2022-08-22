@@ -67,6 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HomeWork\hwimage\chngstar.gif" />
+    <Content Include="HomeWork\hwimage\star.gif" />
+    <Content Include="HomeWork\star.html" />
+    <Content Include="HomeWork\hwimage\01.jpg" />
+    <Content Include="HomeWork\hwimage\02.jpg" />
+    <Content Include="HomeWork\hwimage\03.jpg" />
+    <Content Include="HomeWork\hwimage\04.jpg" />
+    <Content Include="HomeWork\hwimage\05.jpg" />
+    <Content Include="HomeWork\hwimage\06.jpg" />
+    <Content Include="HomeWork\hwimage\07.jpg" />
+    <Content Include="HomeWork\hwimage\08.jpg" />
+    <Content Include="HomeWork\hwimage\09.jpg" />
+    <Content Include="HomeWork\Slides.html" />
     <Content Include="test.html" />
     <Content Include="jQueryLabsrcMSIT%2820220727%29\css\fontawesome-free-6.1.2-web\css\all.css" />
     <Content Include="jQueryLabsrcMSIT%2820220727%29\css\fontawesome-free-6.1.2-web\css\all.min.css" />
